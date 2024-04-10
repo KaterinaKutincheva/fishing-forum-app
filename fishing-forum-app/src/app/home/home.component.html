@@ -1,0 +1,16 @@
+<div class="welcome-container">
+  <div class="welcome-box">
+    <h1>Welcome to the Fishing Forum!</h1>
+    <p>This is a place for fishing enthusiasts to discuss their passion for fishing and share their experiences.</p>
+  </div>
+  <div class="latest-posts">
+    <h2>Latest Posts</h2>
+    <ul>
+      <li *ngFor="let post of latestPosts">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.author }}</p>
+        <p>{{ post.content }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

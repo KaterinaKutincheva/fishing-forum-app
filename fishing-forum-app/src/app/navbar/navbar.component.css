@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #3498db; /* Blue background color for the navbar */
+    padding: 10px 20px; /* Add padding to the navbar */
+  }
+  
+  .navbar ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline-block; /* Display list items inline */
+  }
+  
+  .navbar ul li a {
+    color: #fff; /* White text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Add padding to links */
+  }
+  
+  /* Different background colors for each navigation item */
+  .navbar ul li:nth-child(1) a { background-color: #2ecc71; }
+  .navbar ul li:nth-child(2) a { background-color: #e74c3c; }
+  .navbar ul li:nth-child(3) a { background-color: #f39c12; }
+  .navbar ul li:nth-child(4) a { background-color: #9b59b6; }

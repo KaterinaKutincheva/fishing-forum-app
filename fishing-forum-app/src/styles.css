@@ -1,0 +1,8 @@
+body {
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  background-color: rgba(149, 235, 115, 0.7);
+}
+body {
+  font-family: Helvetica, Arial, sans-serif; /* Use Helvetica font family with fallbacks */
+}

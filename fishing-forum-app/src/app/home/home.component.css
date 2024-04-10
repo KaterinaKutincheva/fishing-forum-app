@@ -1,0 +1,13 @@
+.welcome-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-box {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
