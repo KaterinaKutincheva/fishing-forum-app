@@ -3,13 +3,14 @@
     <h1>Welcome to the Fishing Forum!</h1>
     <p>This is a place for fishing enthusiasts to discuss their passion for fishing and share their experiences.</p>
   </div>
-  <div class="latest-posts">
-    <h2>Latest Posts</h2>
+  <div class="latest-themes">
+    <h2>Latest Themes</h2>
     <ul>
-      <li *ngFor="let post of latestPosts">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.author }}</p>
-        <p>{{ post.content }}</p>
+      <li *ngFor="let theme of themes">
+        <h3>{{ theme.title }}</h3>
+        <p>Created by: {{ theme.username }}</p>
+        <p>Date created: {{ theme.createdAt | date }}</p>
+        <p>Subscribers: {{ theme.subscribers }}</p>
       </li>
     </ul>
   </div>

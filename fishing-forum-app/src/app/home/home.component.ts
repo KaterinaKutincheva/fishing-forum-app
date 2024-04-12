@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-home',
@@ -7,23 +7,22 @@ import { PostService } from '../post.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  latestPosts: any[] = [];
+  themes: any[] = [];
 
-  constructor(private postService: PostService) { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    this.getLatestPosts();
+    this.getThemes();
   }
 
-  getLatestPosts(): void {
-    this.postService.getLatestPosts()
+  getThemes(): void {
+    this.themeService.getThemes()
       .subscribe(
-        (posts) => {
-          this.latestPosts = posts;
+        (themes: any[]) => {
+          this.themes = themes.sort((a, b) => b.subscribers - a.subscribers);
         },
         (error) => {
           console.error(error);
-          // Handle error if needed
         }
       );
   }

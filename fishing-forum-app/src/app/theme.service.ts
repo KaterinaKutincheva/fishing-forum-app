@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemeService {
-  private apiUrl = 'https://localhost:3000/api/themes'; // Replace with your actual API endpoint
+  private apiUrl = 'https://localhost:3000/api/themes';
 
   constructor(private http: HttpClient) { }
 

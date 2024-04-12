@@ -2,7 +2,15 @@
   <ul>
     <li><a routerLink="/home">Home</a></li>
     <li><a routerLink="/themes">Themes</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/register">Register</a></li>
+    <ng-container *ngIf="!isLoggedIn; else loggedInLinks">
+      <!-- Display these links for logged-out users -->
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
+    </ng-container>
+    <ng-template #loggedInLinks>
+      <!-- Display these links for logged-in users -->
+      <li><a routerLink="/profile">Profile</a></li>
+      <li><a routerLink="/logout">Logout</a></li>
+    </ng-template>
   </ul>
 </nav>
